@@ -65,8 +65,7 @@ def validate_fraud_conditions(df):
 
     df['FraudValidation'] = (
         (df['WitnessPresent'] == 'No') & 
-        (df['PoliceReportFiled'] == 'No') & 
-        (df['AgeOfPolicyHolder'] < 25) &
+        (df['PoliceReportFiled'] == 'No') &
         (df['AgeOfPolicyHolder'] != df['Age'])
     )
     
